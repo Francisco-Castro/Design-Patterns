@@ -1,5 +1,11 @@
+package SRP;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
+
+/**
+ *  Example using SRP (Single Responsibility Principle)
+ */
 
 public class MainClassJournal {
 
@@ -22,7 +28,7 @@ public class MainClassJournal {
 
         System.out.println("-------------");
 
-        Journal openJournal = p.openJournalFile(filename);
+        Journal openJournal = p.loadJournalFile(filename);
 
         System.out.println(openJournal.toString());
 

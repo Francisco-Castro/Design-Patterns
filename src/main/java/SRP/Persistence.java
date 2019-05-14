@@ -1,3 +1,5 @@
+package SRP;
+
 import java.io.*;
 
 public class Persistence {
@@ -20,7 +22,7 @@ public class Persistence {
         }
     }
 
-    public Journal openJournalFile(String filename) throws IOException {
+    public Journal loadJournalFile(String filename) throws IOException {
         Journal j = new Journal();
         if (new File(filename).exists()){
             try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
